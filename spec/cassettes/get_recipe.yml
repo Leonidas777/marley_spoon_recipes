@@ -1,0 +1,94 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdn.contentful.com/spaces/kk2bw5ojx476/environments/master/entries?content_type=recipe&sys.id=5jy9hcidWcQ4maKGqIOYW6
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      X-Contentful-User-Agent:
+      - sdk contentful.rb/2.16.1; platform ruby/2.7.0; os Linux;
+      Authorization:
+      - Bearer 7ac531648a1b5e1dab6c18b0979f822a5aad0fe5f1109829b8a197eb2be4b84c
+      Content-Type:
+      - application/vnd.contentful.delivery.v1+json
+      Accept-Encoding:
+      - gzip
+      Connection:
+      - close
+      Host:
+      - cdn.contentful.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '1096'
+      Access-Control-Allow-Headers:
+      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,DNT,Destination,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Http-Method-Override,X-Mx-ReqToken,X-Requested-With,X-Contentful-Version,X-Contentful-Content-Type,X-Contentful-Organization,X-Contentful-Skip-Transformation,X-Contentful-User-Agent,X-Contentful-Enable-Alpha-Feature
+      Access-Control-Allow-Methods:
+      - GET,HEAD,OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Etag
+      Access-Control-Max-Age:
+      - '86400'
+      Cf-Environment-Id:
+      - master
+      Cf-Environment-Uuid:
+      - 3e111988-d2b3-4647-a0a8-ed1215cbd839
+      Cf-Organization-Id:
+      - 0OxgeKaTWSWzTukWE0scEe
+      Cf-Space-Id:
+      - kk2bw5ojx476
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/vnd.contentful.delivery.v1+json
+      Contentful-Api:
+      - cda
+      Etag:
+      - W/"8260921967268374109"
+      Server:
+      - Contentful
+      X-Content-Type-Options:
+      - nosniff
+      X-Contentful-Region:
+      - us-east-1
+      X-Contentful-Route:
+      - "/spaces/:space/environments/:environment/entries"
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Contentful-Cache:
+      - MISS
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 06 Jun 2021 14:48:56 GMT
+      Age:
+      - '3177'
+      X-Served-By:
+      - cache-dca17754-DCA, cache-fra19147-FRA
+      X-Cache-Hits:
+      - 0, 1
+      X-Timer:
+      - S1622990937.669232,VS0,VE1
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - HIT
+      X-Contentful-Request-Id:
+      - 4d2c05e8-b890-4ce2-86c6-e89cadf575e8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA61WbW/bNhD+nl/B6cs2ILYlWbGlAMOQZcEWdG262q3RlyCgJEpiLJEqSdlVi/z3HkXZll079oDpi82XOz738O4efjtDyJK1tC7RN/gLA1WXBEbWlRC4tmDu6VzvUVzhHOadZiTntISB3QxyWlCll2wzpooU2uHHxqFxC9sKonCMFV4fZY7DabP3vtncntasdFGZiRJHGtrK495dzeQqhn8om1sa4+YDtGw+bWOcNB53NtBYhz+fu+Hygj9+8cYjzcLqe1r/b3gxn2VsLh7rIItekpv0X6/AL/76fHv3fjbq+F8Du2FK1N2FSBCsSHylebRc2/F79kXPHk+d4aVnX7rjfjB0P3QNqhK4/C8GhC2o4KwgTJ9xnEMTUoGlImKXolP5vemceZRDQRZUUs50JnWojThTgLm9suO4T8V23fG7NwMEiSiUwlHcOY9w3pQMYb23k5XBOj2shJI83lSYThlLUWVspjyp0ATjFL3GjBCBllRl6I9KAe01mnLNf4xeU6ibDillxhU/6RpPpeNKSqJ279nkgOdPPG/65sOrkTuqvVntXVd3xdVxYoAWLijRkQemNbTVEhMZCVoqc9lWE31poqcSYVTyssqxQLcsppihmMrM0KITuCdolCFZUobhF7MYRVVIJOJJ6+McJlemUUaIJEhlWCFwnVBRIMJ4lWZIcSSgI1GGqPpZIpnhkpyjsFJI0nxe9yRPFOIMbAmiTNKY9NGMoAwvCBjSAqeUwc10r06DEaTMoanEjd0ny4T1yTL4IWpZ1hvADR4FGXCOCjynLAUrzUAO3SCuUUxyGlFewQx4ZpUSFDiD4YKkAF2syQkrIZU5ohRcEcr669QpIXVQqB1qBiQRCwAHN8NSHRPC2jni8A8IYRiD5TXn83MIJMdfNJcxMPbI65/Qx3e3f97c3f+SKVXKy8FguVz2a14poL8f8WKwxCrKfl/89ubl19lsmczid/LXdTU0ZaSb532jGZRFeQV5sM5hyyTgSjU2unFIOXQR7WhHRz326Iee2qMge3eaGm1VYo+KgNExHdFBPqskho5WQYzKrgat5YHC63arjVz/UL/WM5oyDC7tUd8ZO11NAcTPqMohk8O6cpjZZ7RFX+vJvB/Ql+eY3a8y+j73t/HtnNrTyjXgVTOfvHjreIGP/iaCI+fCQy7q4TgcOa4X2EHo+dEoSPxRgBMShWM/HPm233O3ui6oRSMMXaHTFyP048saDHTjIbIfqQTrG5d9RtSg+1gZ7M+aQRDZ+MKxw2gYO34c42DoAJww8YIER0N3PGjBP2jwDwD+4cF9OAF9/7FMd3Uj1o0135a8tvdL+lWH5zq+bw+3dVdXjI7uh+ibalzSWGWw5Nhu88zc/qyM0DTTLxvgdGd182TTNp1nW+NX8/0KF42A/48UbD9bTGCDx5KkB3SzxWyw6sfw09nT2XcRGOkNngsAAA==
+  recorded_at: Sun, 06 Jun 2021 14:48:56 GMT
+recorded_with: VCR 6.0.0

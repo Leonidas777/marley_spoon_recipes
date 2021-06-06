@@ -10,7 +10,7 @@ describe RecipeService do
   end
 
   describe '#get_by_id' do
-    let(:id) { '234' }
+    let(:id) { '5jy9hcidWcQ4maKGqIOYW6' }
     subject { described_class.get_by_id(id) }
 
     it 'returns the recipe' do
