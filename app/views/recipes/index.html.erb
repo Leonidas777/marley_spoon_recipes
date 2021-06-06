@@ -5,8 +5,9 @@
     <%- @recipes.each do |recipe| %>
       <li class="recipes-container__item">
         <div class="recipes-container__title"><%= recipe.title %></div>
+
         <div class="recipes-container__image">
-          <%= link_to image_tag(recipe.photo.url), recipe_path(id: recipe.id) %>
+          <%= link_to(image_tag(recipe.photo.url), recipe_path(id: recipe.id)) %>
         </div>
       </li>
     <%- end %>

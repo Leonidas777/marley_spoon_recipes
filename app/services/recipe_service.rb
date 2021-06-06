@@ -7,7 +7,7 @@ class RecipeService
     end
 
     def get_by_id(id)
-      contentful_client.entries(content_type: 'recipe', 'sys.id' => id)
+      contentful_client.entries('content_type' => 'recipe', 'sys.id' => id).first
     end
 
     private
