@@ -4,10 +4,10 @@ class RecipeService
   LIMIT = 10
 
   class << self
-    def get_all(skip: 0)
+    def get_all(page: 1)
       contentful_client.entries(
         content_type: 'recipe',
-        skip: skip,
+        skip:  skip_for_page(page),
         limit: LIMIT,
         order: 'sys.createdAt'
       )
@@ -26,6 +26,10 @@ class RecipeService
         dynamic_entries: :auto,
         raise_for_empty_fields: false
       )
+    end
+
+    def skip_for_page(page)
+      page <= 1 ? 0 : (page - 1) * LIMIT
     end
   end
 end

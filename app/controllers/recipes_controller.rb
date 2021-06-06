@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   def index
-    @recipes = RecipeService.get_all
+    @recipes = RecipeService.get_all(page: params[:page])
   end
 
   def show
