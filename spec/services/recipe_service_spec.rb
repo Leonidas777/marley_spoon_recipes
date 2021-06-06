@@ -5,7 +5,9 @@ describe RecipeService do
     subject { described_class.get_all }
 
     it 'returns the recipes' do
-      expect(subject).to eq([])
+      VCR.use_cassette('get_all_recipes') do
+        expect(subject).to eq([])
+      end
     end
   end
 
@@ -14,7 +16,9 @@ describe RecipeService do
     subject { described_class.get_by_id(id) }
 
     it 'returns the recipe' do
-      expect(subject).to eq(nil)
+      VCR.use_cassette('get_recipe') do
+        expect(subject).to eq(nil)
+      end
     end
   end
 end

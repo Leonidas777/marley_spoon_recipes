@@ -6,6 +6,9 @@ RSpec.configure do |config|
     c.cassette_library_dir = 'spec/cassettes'
     c.hook_into :webmock
     c.allow_http_connections_when_no_cassette = false
+
+    c.define_cassette_placeholder('<CONTENTFUL_SPACE_ID>', ENV['CONTENTFUL_SPACE_ID'])
+    c.define_cassette_placeholder('<CONTENTFUL_ACCESS_TOKEN>', ENV['CONTENTFUL_ACCESS_TOKEN'])
   end
 
   config.around(:each, :vcr) do |example|
