@@ -6,7 +6,14 @@ describe RecipeService do
 
     it 'returns the recipes' do
       VCR.use_cassette('get_all_recipes') do
-        expect(subject).to eq([])
+        result = subject
+
+        expect(result.is_a?(Contentful::Array)).to eq(true)
+        expect(result.total).to eq(4)
+        expect(result.skip).to eq(0)
+        expect(result.limit).to eq(100)
+        expect(result.first.title).to eq('White Cheddar Grilled Cheese with Cherry Preserves & Basil')
+        expect(result.first.photo.url.starts_with?('//images.ctfassets.net/')).to eq(true)
       end
     end
   end
@@ -17,7 +24,8 @@ describe RecipeService do
 
     it 'returns the recipe' do
       VCR.use_cassette('get_recipe') do
-        expect(subject).to eq(nil)
+        result = subject
+        expect(result).to eq(nil)
       end
     end
   end
