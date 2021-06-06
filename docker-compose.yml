@@ -1,0 +1,56 @@
+version: '3.4'
+
+x-template-app: &template-app
+  environment: &backend_environment
+    RAILS_LOG_TO_STDOUT: 1
+    SECRET_KEY_BASE: a3a8f17300e265cd64205b2
+    RAILS_MASTER_KEY: 1ac2c4b00d7c0cfdcab13727a3822099
+    RAILS_ENV: $RAILS_ENV
+    BUNDLE_PATH: vendor/bundle
+  build:
+    context: .
+    dockerfile: Dockerfile.dev
+    args:
+      BUNDLER_VERSION: "2.1.4"
+  stdin_open: true
+  tty: true
+  volumes:
+    - .:/app
+
+services:
+  bash: &bash
+    <<: *template-app
+    command: bash
+
+  rspec: &rspec
+    <<: *template-app
+    environment:
+      <<: *backend_environment
+      RAILS_ENV: test
+    command: bundle exec rspec
+
+  test: &test
+    <<: *template-app
+    environment:
+      <<: *backend_environment
+      RAILS_ENV: test
+    command: bash
+    depends_on:
+      - postgres
+
+  app: &app
+    <<: *template-app
+    command: irb
+
+  rails:
+    <<: *template-app
+    command:
+      - "bash"
+      - "-c"
+      - >
+        rm -f /app/tmp/pids/server.pid &&
+        bundle exec rails server -b 0.0.0.0
+    ports:
+      - "3000:3000"
+    depends_on:
+      - app
