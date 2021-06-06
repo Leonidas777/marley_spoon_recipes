@@ -7,6 +7,8 @@ x-template-app: &template-app
     RAILS_MASTER_KEY: 1ac2c4b00d7c0cfdcab13727a3822099
     RAILS_ENV: $RAILS_ENV
     BUNDLE_PATH: vendor/bundle
+    CONTENTFUL_SPACE_ID: $CONTENTFUL_SPACE_ID
+    CONTENTFUL_ACCESS_TOKEN: $CONTENTFUL_ACCESS_TOKEN
   build:
     context: .
     dockerfile: Dockerfile.dev
