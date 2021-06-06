@@ -6,7 +6,8 @@ class RecipeService
       contentful_client.entries(content_type: 'recipe')
     end
 
-    def get
+    def get_by_id(id)
+      contentful_client.entries(content_type: 'recipe', 'sys.id' => id)
     end
 
     private
@@ -14,7 +15,8 @@ class RecipeService
     def contentful_client
       @contentful_client ||= Contentful::Client.new(
         space: ENV['CONTENTFUL_SPACE_ID'],
-        access_token: ENV['CONTENTFUL_ACCESS_TOKEN']
+        access_token: ENV['CONTENTFUL_ACCESS_TOKEN'],
+        dynamic_entries: :auto
       )
     end
   end
