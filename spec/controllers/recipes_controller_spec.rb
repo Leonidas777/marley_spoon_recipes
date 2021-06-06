@@ -18,6 +18,17 @@ describe RecipesController do
       expect(assigns(:recipes)).to eq([double_recipe])
       expect(response).to have_http_status(:ok)
     end
+
+    context 'when it raises the error' do
+      before do
+        allow(RecipeService).to receive(:get_all).and_raise(StandardError)
+      end
+
+      it 'renders the 500 page' do
+        expect(subject).to render_template('errors/500')
+        expect(response).to have_http_status(500)
+      end
+    end
   end
 
   describe '#show' do
@@ -36,6 +47,17 @@ describe RecipesController do
       expect(assigns(:recipe)).to eq(double_recipe)
       expect(assigns(:tags)).to eq(['tag1'])
       expect(response).to have_http_status(:ok)
+    end
+
+    context 'when it raises the error' do
+      before do
+        allow(RecipeService).to receive(:get_by_id).and_raise(StandardError)
+      end
+
+      it 'renders the 500 page' do
+        expect(subject).to render_template('errors/500')
+        expect(response).to have_http_status(500)
+      end
     end
   end
 end
