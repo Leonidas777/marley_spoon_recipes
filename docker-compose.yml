@@ -35,8 +35,6 @@ services:
       <<: *backend_environment
       RAILS_ENV: test
     command: bash
-    depends_on:
-      - postgres
 
   app: &app
     <<: *template-app
