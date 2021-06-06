@@ -5,4 +5,11 @@ Rails.application.routes.draw do
 
   get 'recipes', to: 'recipes#index'
   get 'recipe', to: 'recipes#show'
+
+  match '/400' => 'errors#page_400', via: :all
+  match '/401' => 'errors#page_401', via: :all
+  match '/403' => 'errors#page_403', via: :all
+  match '/404' => 'errors#page_404', via: :all
+  match '/429' => 'errors#page_429', via: :all
+  match '/500' => 'errors#page_500', via: :all
 end
