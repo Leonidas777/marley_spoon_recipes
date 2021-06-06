@@ -12,6 +12,6 @@ class RecipesController < ApplicationController
   private
 
   def page
-    params[:page].to_i.abs
+    params[:page].present? ? params[:page].to_i.abs : 1
   end
 end
