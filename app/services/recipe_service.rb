@@ -1,9 +1,16 @@
 # frozen_string_literal: true
 
 class RecipeService
+  LIMIT = 10
+
   class << self
-    def get_all
-      contentful_client.entries(content_type: 'recipe')
+    def get_all(skip: 0)
+      contentful_client.entries(
+        content_type: 'recipe',
+        skip: skip,
+        limit: LIMIT,
+        order: 'sys.createdAt'
+      )
     end
 
     def get_by_id(id)
