@@ -5,5 +5,6 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = RecipeService.get_by_id(params[:id])
+    @tags = @recipe.tags.present? ? @recipe.tags : []
   end
 end
