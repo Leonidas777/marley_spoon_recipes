@@ -9,6 +9,8 @@ gem 'sass-rails', '>= 6'
 
 gem 'listen', '~> 3.3'
 
+gem 'contentful'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'rspec-rails', '~> 5.0.0'
