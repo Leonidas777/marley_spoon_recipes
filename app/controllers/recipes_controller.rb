@@ -4,6 +4,6 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = RecipeService.get
+    @recipe = RecipeService.get_by_id(id: params[:id])
   end
 end
