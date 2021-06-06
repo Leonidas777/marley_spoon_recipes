@@ -11,9 +11,10 @@ describe RecipeService do
         expect(result.is_a?(Contentful::Array)).to eq(true)
         expect(result.total).to eq(4)
         expect(result.skip).to eq(0)
-        expect(result.limit).to eq(100)
-        expect(result.first.title).to eq('White Cheddar Grilled Cheese with Cherry Preserves & Basil')
+        expect(result.limit).to eq(2)
+        expect(result.first.title).to eq('Grilled Steak & Vegetables with Cilantro-Jalapeño Dressing')
         expect(result.first.photo.url.starts_with?('//images.ctfassets.net/')).to eq(true)
+        expect(result.first.chef.name).to eq('Mark Zucchiniberg ')
       end
     end
   end
