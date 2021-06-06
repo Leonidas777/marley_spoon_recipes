@@ -5,7 +5,7 @@
     <%- @recipes.each do |recipe| %>
       <li class="recipes-container__item">
         <div class="recipes-container__title"><%= recipe.title %></div>
-        <div class="recipes-container__image"><%= image_tag(recipe.image) %></div>
+        <div class="recipes-container__image"><%= image_tag(recipe.photo.url) %></div>
       </li>
     <%- end %>
   </ui>
