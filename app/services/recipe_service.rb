@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 class RecipeService
-  LIMIT = 10
+  LIMIT = 2
 
   class << self
     def get_all(page: 1)
       contentful_client.entries(
         content_type: 'recipe',
-        skip:  skip_for_page(page),
+        skip:  skip_for_page(page.to_i),
         limit: LIMIT,
         order: 'sys.createdAt'
       )
