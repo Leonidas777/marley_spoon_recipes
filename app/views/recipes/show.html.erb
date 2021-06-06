@@ -27,4 +27,9 @@
     <div class="recipe-container__row-name">Description</div>
     <div class="recipe-container__row-content"><%= @recipe.description %></div>
   </div>
+
+  <div class="recipe-container__row">
+    <div class="recipe-container__row-name">Chef</div>
+    <div class="recipe-container__row-content"><%= @recipe.chef&.name %></div>
+  </div>
 </div>
