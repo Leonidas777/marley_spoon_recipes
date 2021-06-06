@@ -1,0 +1,26 @@
+<div class="recipe-container">
+  <div class="recipe-container__row">
+    <div class="recipe-container__row-name">Title</div>
+    <div><%= @recipe.title %></div>
+  </div>
+
+  <div class="recipe-container__row">
+    <div class="recipe-container__row-name">Image</div>
+    <%= image_tag(@recipe.image) %>
+  </div>
+
+  <div class="recipe-container__row">
+    <div class="recipe-container__row-name">List of Tags</div>
+    <div><%= @recipe.tags %></div>
+  </div>
+
+  <div class="recipe-container__row">
+    <div class="recipe-container__row-name">Description</div>
+    <div><%= @recipe.description %></div>
+  </div>
+
+  <div class="recipe-container__row">
+    <div class="recipe-container__row-name">Chef Name</div>
+    <div><%= @recipe.chef_name %></div>
+  </div>
+</div>
