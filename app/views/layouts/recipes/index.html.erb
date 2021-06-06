@@ -1,0 +1,14 @@
+<h1>Recipes</h1>
+
+<%- if @recipes.size > 0 %>
+  <ui class="recipes-container">
+    <%- @recipes.each do |recipe| %>
+      <li class="recipes-container__item">
+        <div class="recipes-container__title"><%= recipe.title %></div>
+        <div class="recipes-container__image"><%= image_tag(recipe.image) %></div>
+      </li>
+    <%- end %>
+  </ui>
+<%- else %>
+  <div class="no-content-block">No recipes found</div>
+<%- end %>
