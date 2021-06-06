@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://cdn.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/master/content_types?limit=1000
+    uri: https://cdn.contentful.com/spaces/CONTENTFUL_SPACE_ID/environments/master/content_types?limit=1000
     body:
       encoding: UTF-8
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       X-Contentful-User-Agent:
       - sdk contentful.rb/2.16.1; platform ruby/2.7.0; os Linux;
       Authorization:
-      - Bearer <CONTENTFUL_ACCESS_TOKEN>
+      - Bearer CONTENTFUL_ACCESS_TOKEN
       Content-Type:
       - application/vnd.contentful.delivery.v1+json
       Accept-Encoding:
@@ -47,7 +47,7 @@ http_interactions:
       Cf-Organization-Id:
       - 0OxgeKaTWSWzTukWE0scEe
       Cf-Space-Id:
-      - <CONTENTFUL_SPACE_ID>
+      - CONTENTFUL_SPACE_ID
       Content-Encoding:
       - gzip
       Content-Type:
@@ -93,7 +93,7 @@ http_interactions:
   recorded_at: Sun, 06 Jun 2021 15:18:25 GMT
 - request:
     method: get
-    uri: https://cdn.contentful.com/spaces/<CONTENTFUL_SPACE_ID>/environments/master/entries?content_type=recipe
+    uri: https://cdn.contentful.com/spaces/CONTENTFUL_SPACE_ID/environments/master/entries?content_type=recipe
     body:
       encoding: UTF-8
       string: ''
@@ -101,7 +101,7 @@ http_interactions:
       X-Contentful-User-Agent:
       - sdk contentful.rb/2.16.1; platform ruby/2.7.0; os Linux;
       Authorization:
-      - Bearer <CONTENTFUL_ACCESS_TOKEN>
+      - Bearer CONTENTFUL_ACCESS_TOKEN
       Content-Type:
       - application/vnd.contentful.delivery.v1+json
       Accept-Encoding:
@@ -138,7 +138,7 @@ http_interactions:
       Cf-Organization-Id:
       - 0OxgeKaTWSWzTukWE0scEe
       Cf-Space-Id:
-      - <CONTENTFUL_SPACE_ID>
+      - CONTENTFUL_SPACE_ID
       Content-Encoding:
       - gzip
       Content-Type:
