@@ -12,6 +12,6 @@ class RecipesController < ApplicationController
   private
 
   def page
-    params[:page].to_i
+    params[:page].to_i.abs
   end
 end
