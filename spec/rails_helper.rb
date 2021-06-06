@@ -1,8 +1,8 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
-ENV['CONTENTFUL_SPACE_ID'] = 'test_space_id'
-ENV['CONTENTFUL_ACCESS_TOKEN'] = 'test_access_token'
+ENV['CONTENTFUL_SPACE_ID'] = '<CONTENTFUL_SPACE_ID>'
+ENV['CONTENTFUL_ACCESS_TOKEN'] = '<CONTENTFUL_ACCESS_TOKEN>'
 
 require File.expand_path('../config/environment', __dir__)
 
