@@ -2,6 +2,8 @@
 
 <%- if @recipes.size > 0 %>
   <ui class="recipes-container">
+    <%= render 'shared/pagination', page: @current_page %>
+
     <%- @recipes.each do |recipe| %>
       <li class="recipes-container__item">
         <div class="recipes-container__title"><%= recipe.title %></div>
@@ -11,6 +13,8 @@
         </div>
       </li>
     <%- end %>
+
+    <%= render 'shared/pagination', page: @current_page %>
   </ui>
 <%- else %>
   <div class="no-content-block">No recipes found</div>

@@ -1,0 +1,9 @@
+<div class="pagination-block">
+  <%- if prev_page_for(page) %>
+    <%= link_to 'Prev', recipes_path(page: prev_page_for(page)), class: 'pagination-block__prev-page-element' %>
+  <%- end %>
+
+  <span class="pagination-block__current-page-element"><%= page %></span>
+
+  <%= link_to 'Next', recipes_path(page: page + 1), class: 'pagination-block__prev-page-element' %>
+</div>
